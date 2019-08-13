@@ -15,8 +15,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # s = ssl.wrap_socket(socket.socket())
 
 # 主机(域名或者ip)和端口
-host = 'g.cn'
-port = 80
+host = 'localhost'
+port = 2000
 # 用 connect 函数连接上主机, 参数是一个 tuple
 s.connect((host, port))
 
