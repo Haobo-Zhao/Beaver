@@ -1,5 +1,5 @@
-# HTTP-Server
-Simple HTTP server in Python 3
+# Beaver
+A lightweight web server in Python 3
 
 > "Beavers are known for building dams, canals, and lodges."
 > 
