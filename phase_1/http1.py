@@ -28,14 +28,15 @@ while True:
     # recv 可以接收客户端发送过来的数据
     # 参数是要接收的字节数
     # 返回值是一个 bytes 类型
-    request = connection.recv(1024)
+    request = connection.recv(1023)
 
     # bytes 类型调用 decode('utf-8') 来转成一个字符串(str)
     print('ip and request, {}\n{}'.format(address, request.decode('utf-8')))
 
     # b'' 表示这是一个 bytes 对象
-    response = b'<h1>Hello World!</h1>'
+    response = b'HTTP/1.1 200 VERY OK\r\n\r\n<h1>Hello World!</h1>'
     # 用 sendall 发送给客户端
+    # print('\nresponse:\n', response)
     connection.sendall(response)
     # 发送完毕后, 关闭本次连接
     connection.close()
