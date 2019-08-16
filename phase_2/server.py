@@ -8,7 +8,9 @@ def log(*args, **kwargs):
 # handler of index page, path `/`
 def route_index():
     header = 'HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n'
-    body = '<h1>Hello Gua</h1><img src="/doge.gif">'
+    body = '<h1>"Hello Joe, I mean, Haobo, my dude!"</h1>' \
+           '<h1>"Ah OK."</h1>' \
+           '<img src="/doge.gif">'
     r = header + '\r\n' + body
     return r.encode(encoding='utf-8')
 
@@ -35,6 +37,7 @@ def route_image():
         return img
 
 
+# error handler, supporting 404 only currently
 def error(code=404):
     e = {
         404: b'HTTP/1.1 404 NOT FOUND\r\n\r\n<h1>NOT FOUND</h1>',
