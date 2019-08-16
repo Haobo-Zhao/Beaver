@@ -15,7 +15,6 @@ s = socket.socket()
 # 注意 bind 函数的参数是一个 tuple
 s.bind((host, port))
 
-
 # 用一个无限循环来处理请求
 while True:
     # 套路, 先要 s.listen 开始监听
